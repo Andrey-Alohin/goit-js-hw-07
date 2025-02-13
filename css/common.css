@@ -22,7 +22,13 @@ img {
 input {
   display: block;
 }
-
+button {
+  transition: background-color 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+input:hover,
+input:focus {
+  transition: border-color 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 /* Task #1 */
 #categories {
   display: flex;
@@ -100,6 +106,10 @@ input {
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
+#name-input:hover,
+#name-inpur:focus {
+  border-color: #000;
+}
 
 /* Task #4 */
 .login-form {
@@ -135,6 +145,16 @@ input {
   width: 86px;
 }
 
+.login-form input:hover,
+.login-form input:focus {
+  border-color: #000;
+}
+
+.login-form button:hover,
+.login-form button:focus {
+  background-color: #6c8cff;
+}
+
 /* Task #5 */
 .widget {
   padding: 100px 88px;
@@ -165,4 +185,57 @@ input {
   background-color: #4e75ff;
   color: #fff;
   font-weight: 500;
+}
+.widget button:hover,
+.widget button:focus {
+  background-color: #6c8cff;
+}
+
+/* Task # 6 */
+#controls {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 486px;
+  padding: 32px;
+  margin: 0 auto;
+}
+#controls button {
+    flex: 1;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 8px;
+    border-style: none;
+    color: #fff;
+}
+#controls input{
+  width: 150px;
+  border: 1px solid #808080;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  outline: transparent;
+}
+#controls button:first-of-type {
+  background-color: #4e75ff;
+}
+#controls button:last-of-type {
+  background-color: #ff4e4e;
+}
+#controls button:last-of-type:hover,
+#controls button:last-of-type:focus {
+  background-color: #ff7070;
+}
+#boxes {
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px 44px;
+  flex-wrap: wrap;
 }
