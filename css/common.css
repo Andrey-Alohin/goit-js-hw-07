@@ -225,6 +225,10 @@ input:focus {
 #controls button:first-of-type {
   background-color: #4e75ff;
 }
+#controls button:first-of-type:hover,
+#controls button:first-of-type:focus {
+  background-color: #6c8cff;
+}
 #controls button:last-of-type {
   background-color: #ff4e4e;
 }
