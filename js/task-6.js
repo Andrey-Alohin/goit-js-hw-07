@@ -17,7 +17,8 @@ function destroyBoxes() {
 }
 
 function createBoxes() {
-  const amount = input.value;
+  let amount = input.value;
+  const markUp = [];
   if (1 <= amount && amount <= 100) {
     destroyBoxes();
     let size = 30;
@@ -26,10 +27,12 @@ function createBoxes() {
     newDiv.style.width = `${size}px`;
     newDiv.style.height = `${size}px`;
     newDiv.style.backgroundColor = getRandomHexColor();
-    container.append(newDiv);
+    markUp.push(newDiv);
     size += 10;
-    } 
+    }
   }
+  container.append(...markUp);
+  amount = ""
 }
 
 createButton.addEventListener("click", createBoxes);
