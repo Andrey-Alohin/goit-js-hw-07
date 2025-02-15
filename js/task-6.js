@@ -32,7 +32,7 @@ function createBoxes() {
     }
   }
   container.append(...markUp);
-  amount = ""
+  input.value = '';
 }
 
 createButton.addEventListener("click", createBoxes);
