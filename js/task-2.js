@@ -26,6 +26,7 @@ const images = [
 ];
 const galerry = document.querySelector(".gallery");
 function addingImages (array, linkOfList) {
+  const markUp = [];
   array.forEach(element => {
     const newLi = document.createElement("li");
     const newImg = document.createElement("img");
@@ -34,7 +35,8 @@ function addingImages (array, linkOfList) {
     newImg.setAttribute("width", "360");
     newImg.setAttribute("height", "300");
     newLi.append(newImg);
-    linkOfList.append(newLi);
+    markUp.push(newLi)
   });
+  linkOfList.append(...markUp);
 };
 addingImages(images, galerry);
